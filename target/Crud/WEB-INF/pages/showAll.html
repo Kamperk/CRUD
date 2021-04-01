@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H2>Все люди</H2>
+<table border="1">
+    <tbody>
+    <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>Age</th>
+    </tr>
+    <tr th:each="user : ${allUsers}">
+        <td th:utext="${user.id}">index</td>
+        <td th:utext="${user.name}">name</td>
+        <td th:utext="${user.lastname}">lastName</td>
+        <td th:utext="${user.job}">job</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
